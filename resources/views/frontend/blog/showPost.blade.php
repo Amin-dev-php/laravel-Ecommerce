@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="comments-area">
-                    <h4>05 Comments</h4>
+                    <h4><h4><i class="far fa-comments"></i> {{ $post->comments->where('approved',1)->count() }} Comments</h4></h4>
                 </div>
                 @comments(['model' => $post,'approved' => true])
             </div>
