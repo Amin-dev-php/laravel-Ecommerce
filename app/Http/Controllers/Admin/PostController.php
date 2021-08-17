@@ -163,7 +163,7 @@ class PostController extends Controller
             $location = public_path('post-image/');
             $request->file('image')->move($location, $filename);
         }
-        $post->user_id = $post->user_id;
+        $post->user_id = Auth::user()->id;
         $post->category_id = $request->category;
         $post->title = $request->title;
         $post->subtitle = $request->subtitle;
